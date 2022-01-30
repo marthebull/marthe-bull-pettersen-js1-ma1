@@ -62,16 +62,28 @@ const cats = [
     }
 ];
 
+
 function myFunction (list) {
-    for (let cat of cats) {
+    for (i = 0; i < cats.length; i++) {
         console.log (cats[i].name);
     }
 }
 
-myFunction(list);
+myFunction();
+
 
 
 // Question 8
 console.log ("Question: 8");
+
+const catNameAge = document.createElement("div");
+const name = document.createElement("h5");
+const age = document.createElement("p");
+
+function createCats (cats) {
+    for (cat of cats) {
+        return cat[0].name;
+    }
+}
 
 
