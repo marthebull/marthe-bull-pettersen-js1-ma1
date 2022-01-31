@@ -2,7 +2,15 @@
 // Question 1
 console.log ("Question: 1");
 
-const cat = { complain : console.log("Meow!")}
+
+const cat = {
+    complain: function() {
+        console.log("Meow!");
+    }
+}
+
+cat.complain();
+
 
 
 
