@@ -76,14 +76,23 @@ myFunction();
 // Question 8
 console.log ("Question: 8");
 
-const catNameAge = document.createElement("div");
-const name = document.createElement("h5");
-const age = document.createElement("p");
+let catContainer = document.querySelector(".cat-container");
 
 function createCats (cats) {
-    for (cat of cats) {
-        return cat[0].name;
+    for (let cat of cats) {
+
+        if (typeof cat.age === "undefined") {
+            cat.age = "Age unknown";
+        }
+
+        let eachCat = 
+        `<div> 
+        <h5>${cat.name}</h5>
+        <p>${cat.age}</p>
+        </div>`;
+
+        catContainer.innerHTML += eachCat;
     }
 }
 
-
+createCats (cats);
