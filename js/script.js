@@ -4,7 +4,7 @@ console.log ("Question: 1");
 
 
 const cat = {
-    complain: function() {
+    complain: () => {
         console.log("Meow!");
     }
 }
@@ -89,7 +89,7 @@ let catContainer = document.querySelector(".cat-container");
 function createCats (cats) {
     for (let cat of cats) {
 
-        if (typeof cat.age === "undefined") {
+        if (typeof cat.age !== "number") {
             cat.age = "Age unknown";
         }
 
